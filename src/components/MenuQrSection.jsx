@@ -1,4 +1,4 @@
-import QRCode from "react-qr-code"
+import { QRCode } from "react-qr-code"
 
 export default function MenuQrSection({ menuUrl, nombreMarca }) {
   const url = (menuUrl || "").trim() || (typeof window !== "undefined" ? window.location.origin + "/" : "")
