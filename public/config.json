@@ -1,0 +1,17 @@
+{
+  "nombre": "Santa Burga",
+  "slogan": "Las Santas Hamburguesas 🔥",
+  "logo": "/logo.png",
+  "colores": {
+    "primary": "#0D0D0D",
+    "accent": "#FF6B00",
+    "accent2": "#FF3300",
+    "bg": "#111111"
+  },
+  "contacto": {
+    "whatsapp": "50685066525",
+    "telefono": "2101-1955",
+    "horario": "Todos los días"
+  },
+  "categorias": ["Todo", "Hamburguesas", "Pollo", "Papas", "Surtidas", "Tacos", "Emparedados", "Batidos"]
+}
