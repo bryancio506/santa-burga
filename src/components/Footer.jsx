@@ -1,7 +1,8 @@
 import { FlamesTop } from "./FlamesSVG"
+import { waUrlPedidoGeneral } from "../whatsappCopy"
 
 export default function Footer({ config }) {
-  const wa = `https://wa.me/${config.contacto.whatsapp}?text=Hola%20Santa%20Burga%2C%20quiero%20hacer%20un%20pedido%20🍔`
+  const wa = waUrlPedidoGeneral(config.contacto.whatsapp)
   return (
     <footer style={{ background: "#0D0D0D", marginTop: "2rem" }}>
       <FlamesTop opacity={0.4}/>

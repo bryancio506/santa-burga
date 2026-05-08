@@ -1,4 +1,5 @@
 import { menuItemImageSrc, MENU_IMAGE_PLACEHOLDER } from "../menuImage"
+import { waUrlPedidoItem } from "../whatsappCopy"
 
 const IconWa = () => (
   <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
@@ -8,8 +9,7 @@ const IconWa = () => (
 
 export default function MenuCard({ item, whatsapp }) {
   const precio = new Intl.NumberFormat("es-CR", { style:"currency", currency:"CRC", maximumFractionDigits:0 }).format(item.precio)
-  const msg = encodeURIComponent(`Hola Santa Burga 🍔 quiero pedir: ${item.nombre} (${precio})`)
-  const wa = `https://wa.me/${whatsapp}?text=${msg}`
+  const wa = waUrlPedidoItem(whatsapp, item.nombre, precio)
   const imgSrc = menuItemImageSrc(item)
   const imgIsPlaceholder = imgSrc === MENU_IMAGE_PLACEHOLDER
 

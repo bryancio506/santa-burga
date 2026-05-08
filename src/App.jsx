@@ -4,6 +4,8 @@ import Header from "./components/Header"
 import Categorias from "./components/Categorias"
 import MenuCard from "./components/MenuCard"
 import Footer from "./components/Footer"
+import MenuQrSection from "./components/MenuQrSection"
+import { waUrlPedidoItem } from "./whatsappCopy"
 
 // Carrusel de destacados para el hero (incluye platos con foto aunque no sean solo destacados)
 function HeroCarousel({ items, whatsapp }) {
@@ -28,7 +30,7 @@ function HeroCarousel({ items, whatsapp }) {
   const heroImg = menuItemImageSrc(item)
   const heroImgPlaceholder = heroImg === MENU_IMAGE_PLACEHOLDER
   const precio = new Intl.NumberFormat("es-CR", { style:"currency", currency:"CRC", maximumFractionDigits:0 }).format(item.precio)
-  const wa = `https://wa.me/${whatsapp}?text=${encodeURIComponent(`Hola Santa Burga 🍔 quiero pedir: ${item.nombre} (${precio})`)}`
+  const wa = waUrlPedidoItem(whatsapp, item.nombre, precio)
 
   return (
     <div style={{
@@ -232,6 +234,8 @@ export default function App() {
           </div>
         )}
       </main>
+
+      <MenuQrSection menuUrl={config.menuPublicUrl} nombreMarca={config.nombre}/>
 
       <Footer config={config}/>
     </div>

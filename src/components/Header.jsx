@@ -1,4 +1,5 @@
 import { FlamesBottom } from "./FlamesSVG"
+import { waUrlPedidoGeneral } from "../whatsappCopy"
 
 const IconWa = () => (
   <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
@@ -7,7 +8,7 @@ const IconWa = () => (
 )
 
 export default function Header({ config }) {
-  const wa = `https://wa.me/${config.contacto.whatsapp}?text=Hola%20Santa%20Burga%2C%20quiero%20hacer%20un%20pedido%20🍔`
+  const wa = waUrlPedidoGeneral(config.contacto.whatsapp)
 
   return (
     <header style={{ background: "#0D0D0D", position: "relative", overflow: "hidden" }}>

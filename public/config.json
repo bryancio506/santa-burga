@@ -2,6 +2,7 @@
   "nombre": "Santa Burga",
   "slogan": "Las Santas Hamburguesas 🔥",
   "logo": "/logo.png",
+  "menuPublicUrl": "https://santa-burga.netlify.app/",
   "colores": {
     "primary": "#0D0D0D",
     "accent": "#FF6B00",
